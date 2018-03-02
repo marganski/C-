@@ -4,5 +4,14 @@
 #include "Factorial.h"
 
 int factorial(int value) {
+  if(value<13 && value>-13) {
+    if (value == 1 || value == 0) {
+      return 1;
+    }
+    if (value < 0) {
+      return factorial(value + 1) * value;
+    }
+    return factorial(value - 1) * value;
+  }
   return 0;
 }
